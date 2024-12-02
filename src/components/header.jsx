@@ -18,10 +18,10 @@ function Header() {
             <nav className={`menu ${menuOpen ? 'open' : ''}`}>
                 <ul>
                     <li><a href="/about">sobre</a></li>
-                    <li><a href="/hobbies">hobbies</a></li>
                     <li><a href="/projects">projetos</a></li>
                     <li><a href="/technology">tecnologias</a></li>
                     <li><a href="/certificate">certificados</a></li>
+                    <li><a href="/hobbies">hobbies</a></li>
                     <li><a href="/contact">contato</a></li>
                 </ul>
             </nav>

@@ -261,8 +261,6 @@ function Projects() {
 
   return (
     <div className="projects-container">
-      {/* <h1>Projetos de Desenvolvimento</h1>
-      <br /> */}
       <div className="filters-container">
         <div className="filters">
           <h3>Filtros por Tags:</h3>
@@ -285,9 +283,10 @@ function Projects() {
       <br />
       <div className="projects-grid">
         {filteredProjects.map((project) => (
-          <div key={project.id} className="project-card" onClick={() => openModal(project)}>
+          <div key={project.id} className="project-card">
             <img src={project.image} alt={project.name} />
             <h4>{project.name}</h4>
+            <button onClick={() => openModal(project)} className="learn-more-button">Saiba Mais</button>
           </div>
         ))}
       </div>

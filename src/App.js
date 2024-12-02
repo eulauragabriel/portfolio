@@ -1,15 +1,15 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
-import Home from './src/pages/home';
-import Header from './src/components/header';
-import Footer from './src/components/footer';
-import About from './src/pages/about';
-import Projects from './src/pages/projects';
-import Technology from './src/pages/technology';
-import CertificatePage from './src/pages/certificate';
-import ContactPage from './src/pages/contact';
-import HobbiesPage from './src/pages/hobbies';
+import Home from './pages/home';
+import Header from './components/header';
+import Footer from './components/footer';
+import About from './pages/about';
+import Projects from './pages/projects';
+import Technology from './pages/technology';
+import CertificatePage from './pages/certificate';
+import ContactPage from './pages/contact';
+import HobbiesPage from './pages/hobbies';
 
 function App() {
     return (
