@@ -43,6 +43,9 @@ const technologies = {
     { name: 'Jupyter Notebook', icon: <SiJupyter /> },
     { name: 'Colab', logo: require('../assets/colab.png') },
     { name: 'Vertabelo', logo: require('../assets/vertabelo.png') },
+    { name: 'WordPress', logo: require('../assets/wordpress.png') },
+    { name: 'Elementor', logo: require('../assets/elementor.png') },
+    { name: 'Jira', logo: require('../assets/jira.png') },
   ],
 };
 

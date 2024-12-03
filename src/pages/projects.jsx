@@ -153,7 +153,7 @@ const projects = [
     name: "Rede Social com API do Gemini",
     image: require('../assets/projetoXIII.png'),
     description: "Desenvolvimento de uma rede social com a API do Gemini para uma Imersão Backend da Plataforma Alura.",
-    contributions: "Desenvolvi o Back-End da aplicação, trabalhei na implementação da API do Gemini que cria descrições automáticas baseadas na imagens postadas, na criação do banco de dados e na integração com o Front-End e no Deploy na Google Cloud. Foi um projeto desafiador e extremamente enriquecedor pois tive a oportunidade de trabalhar com a API do Gemini e com a Google Cloud pela primeira vez.",
+    contributions: "Desenvolvi o Back-End da aplicação, trabalhei na implementação da API do Gemini que cria descrições automáticas baseadas na imagens postadas, na criação do banco de dados e na integração com o Front-End e no Deploy na Google Cloud. Foi um projeto desafiador e extremamente enriquecedor, pois tive a oportunidade de trabalhar com a API do Gemini e com a Google Cloud pela primeira vez.",
     hardSkills: "NodeJS, Express, Gemini API, Google Cloud e MongoDB",
     softSkills: "Autonomia e habilidade de estimar prazos.",
     repository: "https://back-240579360277.southamerica-east1.run.app/posts",
