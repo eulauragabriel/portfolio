@@ -23,6 +23,10 @@
     text-align: left;
 } 
 
+.conteudo-texto p {
+    font-size: 1em;
+}
+
 .conteudo-img {
     width: 50%;
     margin: 25px;

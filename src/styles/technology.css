@@ -6,6 +6,10 @@
     text-align: center;
     min-height: 100vh;
   }
+
+  .technology-category {
+    font-size: 1em;
+  }
   
   .technology-category {
     margin-bottom: 40px;
