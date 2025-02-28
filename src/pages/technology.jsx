@@ -52,6 +52,8 @@ const technologies = {
 const Technology = () => {
   return (
     <div className="technology-page">
+      <h2>Tecnologias Trabalhadas</h2>
+      <br />
       {Object.keys(technologies).map(category => (
         <div key={category} className="technology-category">
           <h2>{category.charAt(0).toUpperCase() + category.slice(1)}</h2>

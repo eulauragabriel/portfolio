@@ -22,7 +22,7 @@ function Header() {
                     <li><a href="/technology">tecnologias</a></li>
                     <li><a href="/certificate">certificados</a></li>
                     <li><a href="/hobbies">hobbies</a></li>
-                    <li><a href="/contact">contato</a></li>
+                    {/* <li><a href="/contact">contato</a></li> */}
                 </ul>
             </nav>
             <div className="menu-toggle" onClick={toggleMenu}>

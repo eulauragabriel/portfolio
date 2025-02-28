@@ -7,9 +7,9 @@ function Home() {
     <div className="container">
         <div className="retangulo">
             <div className="conteudo-texto">
-                <p>Oi, eu sou a Laura, uma estudante de desenvolvimento de software multiplataforma.</p>
+                <p>Oi, eu sou a Laura, uma estudante e estagiária de desenvolvimento de software.</p>
                 <br />
-                <p>Atualmente no quarto semestre e aqui você vai encontrar um pouco sobre mim, meus projetos e experiências.</p>
+                <p>Atualmente no quinto semestre e aqui você vai encontrar um pouco sobre mim, meus projetos e experiências.</p>
             </div>
             <div className="conteudo-img">
                 <img src={Laura} alt="laura" />

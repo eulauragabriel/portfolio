@@ -9,7 +9,7 @@ function About() {
       </div>
       <div className='text'>
         <h1><strong>Sobre mim</strong></h1>
-        <p>Oi! Eu sou a Laura, atualmente estou no quarto semestre no Curso Superior de Tecnologia de Desenvolvimento de Software Multiplataforma na Fatec Prof. Jessen Vidal em São José dos Campos, SP.</p>
+        <p>Oi! Eu sou a Laura, atualmente estou no quinto semestre no Curso Superior de Tecnologia de Desenvolvimento de Software Multiplataforma na Fatec Prof. Jessen Vidal em São José dos Campos, SP e sou estagiária em Desenvolvimento de Soluções Pro Code na Embraer. </p>
 
         <p>Sou bastante extrovertida e aprecio poder conversar, trocar experiências e aprender com as pessoas ao meu redor. Sou apaixonada por história e motivada pela vontade de desenvolver projetos que auxiliem a sociedade.</p>
 
