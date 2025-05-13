@@ -17,7 +17,7 @@ function Header() {
             </div>
             <nav className={`menu ${menuOpen ? 'open' : ''}`}>
                 <ul>
-                    <li><a href="/about">sobre</a></li>
+                    <li><a href="/">sobre</a></li>
                     <li><a href="/projects">projetos</a></li>
                     <li><a href="/technology">tecnologias</a></li>
                     <li><a href="/certificate">certificados</a></li>
