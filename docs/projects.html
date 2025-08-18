@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laura Gabriel - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 0;
+        }
+
+        .hero-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #718096;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .hero-description {
+            font-size: 1rem;
+            color: #4a5568;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid #e2e8f0;
+        }
+
+        .contact-section {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 0.8rem;
+            background: #f7fafc;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .contact-item:hover {
+            background: #edf2f7;
+        }
+
+        .contact-icon {
+            width: 32px;
+            height: 32px;
+            background: #667eea;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 1rem;
+            font-size: 1rem;
+        }
+
+        .contact-item a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            color: #5a67d8;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+
+        .skill-item {
+            background: #667eea;
+            color: white;
+            padding: 0.8rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: transform 0.2s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .curriculo-btn {
+            background: #667eea;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            margin-top: 1rem;
+        }
+
+        .curriculo-btn:hover {
+            background: #5a67d8;
+            transform: translateY(-1px);
+        }
+
+        .separator {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #edf2f7;
+        }
+
+        .separator::after {
+            content: "• • •";
+            color: #a0aec0;
+            font-size: 1.5rem;
+        }
+
+        .projeto-page {
+            min-height: 100vh;
+            padding: 3rem 0;
+            background: white;
+        }
+
+        .projeto-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .projeto-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .projeto-title {
+            font-size: 2.5rem;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .projeto-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .projeto-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .projeto-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .projeto-image:hover img {
+            transform: scale(1.02);
+        }
+
+        .projeto-details {
+            background: #f7fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .detail-section {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .detail-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .detail-title {
+            color: #2d3748;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .detail-text {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: #667eea;
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 16px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .github-btn {
+            background: #2d3748;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            margin-top: 1.5rem;
+        }
+
+        .github-btn:hover {
+            background: #1a202c;
+            transform: translateY(-1px);
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .hero-container,
+            .projeto-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .projeto-title {
+                font-size: 2rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-info,
+            .projeto-details {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="page">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Laura Gabriel</h1>
+                <p class="hero-subtitle">Desenvolvedora de Software</p>
+                <div class="hero-description">
+                    <p><strong>Oi, eu sou a Laura!</strong></p>
+                    <p>Sou estudante de Desenvolvimento de Software Multiplataforma na FATEC e estagiária na Embraer.</p>
+                    <p>Sou curiosa, gosto de me desafiar, aprender coisas novas e sou apaixonada por transformar ideias em projetos reais.</p>
+                </div>
+                <a href="https://drive.google.com/file/d/1hjN9xSd5WdSIknSAmcHd2f95MtV_dOv_/view?usp=drive_link" target="_blank" class="curriculo-btn">
+                    Ver Currículo
+                </a>
+            </div>
+
+            <div class="hero-info">
+                <div class="contact-section">
+                    <h3 style="color: #2d3748; margin-bottom: 1rem; font-size: 1.2rem;">Contato</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✨</div>
+                        <div>
+                            <strong>Email:</strong> 
+                            <a href="mailto:eulauragabriel@gmail.com">eulauragabriel@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">✨</div>
+                        <div>
+                            <strong>GitHub:</strong> 
+                            <a href="https://github.com/eulauragabriel" target="_blank">eulauragabriel</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">✨</div>
+                        <div>
+                            <strong>LinkedIn:</strong> 
+                            <a href="https://linkedin.com/in/laura" target="_blank">Laura Gabriel</a>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="color: #2d3748; margin-bottom: 1rem; font-size: 1.2rem;">Tecnologias</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">HTML</div>
+                    <div class="skill-item">CSS</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">TypeScript</div>
+                    <div class="skill-item">React</div>
+                    <div class="skill-item">Node.js</div>
+                    <div class="skill-item">Python</div>
+                    <div class="skill-item">MySQL</div>
+                    <div class="skill-item">MongoDB</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="separator"></div>
+
+    <section class="projeto-page">
+        <div class="projeto-container">
+            <div class="projeto-header">
+                <h2 class="projeto-title">Projeto em Destaque</h2>
+                <p style="font-size: 1.1rem; color: #718096;">Projeto Integrador 1° Semestre - Covid Longa</p>
+            </div>
+
+            <div class="projeto-content">
+                <div class="projeto-image">
+                    <img src="projetoIII.png" alt="Projeto Covid Longa">
+                </div>
+
+                <div class="projeto-details">
+                    <div class="detail-section">
+                        <h3 class="detail-title">Descrição</h3>
+                        <p class="detail-text">Um site desenvolvido pela minha equipe sobre Covid Longa no qual participei do time de desenvolvimento. O projeto foi criado para a Rede Vanguarda com o objetivo de informar a população sobre os sintomas e impactos da Covid Longa.</p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3 class="detail-title">Minhas Contribuições</h3>
+                        <p class="detail-text">Realizei pesquisas detalhadas sobre Covid Longa, desenvolvi partes do site e ajudei a construir o banco de dados. Lidamos com requisições de um cliente real e tivemos muitos desafios como a dificuldade para fazer raspagem de dados e a falta de dados precisos sobre o assunto.</p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3 class="detail-title">Tecnologias</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">ChartJS</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Excel</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3 class="detail-title">Habilidades Desenvolvidas</h3>
+                        <p class="detail-text"><strong>Técnicas:</strong> Desenvolvimento web, análise de dados, trabalho com gráficos interativos</p>
+                        <p class="detail-text"><strong>Comportamentais:</strong> Comunicação, trabalho em equipe, empatia, adaptação a mudanças</p>
+                    </div>
+
+                    <a href="https://github.com/Equipe-CodeLand/API-2023.1" target="_blank" class="github-btn">
+                        <span>→</span> Ver no GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
