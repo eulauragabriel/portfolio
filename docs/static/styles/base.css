@@ -189,6 +189,26 @@ footer {
     padding: 12px 20px;
     transition: all 0.3s ease;
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.contatos .icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%);
+    transition: all 0.3s ease;
+}
+
+.contatos .text {
+    font-size: 1em;
+}
+
+.contatos a:hover .icon {
+    filter: brightness(0) saturate(100%) invert(25%) sepia(63%) saturate(4685%) hue-rotate(260deg) brightness(95%) contrast(87%);
+    transform: scale(1.1);
 }
 
 .contatos a::after {
@@ -252,5 +272,67 @@ footer {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    /* Ajustar padding do body para footer menor */
+    body {
+        padding-bottom: 80px;
+    }
+    
+    /* Footer responsivo */
+    footer {
+        padding: 15px 10px;
+    }
+    
+    .contatos ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .contatos a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+    
+    .contatos .icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustar padding do body para footer extra pequeno */
+    body {
+        padding-bottom: 70px;
+    }
+    
+    /* Footer extra pequeno - apenas ícones */
+    footer {
+        padding: 10px 2px;
+    }
+    
+    .contatos ul {
+        gap: 15px;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    
+    .contatos a {
+        padding: 8px 10px;
+        gap: 0;
+    }
+    
+    /* Esconder texto, mostrar apenas ícones */
+    .contatos .text {
+        display: none;
+    }
+    
+    .contatos .icon {
+        width: 24px;
+        height: 24px;
     }
 }
