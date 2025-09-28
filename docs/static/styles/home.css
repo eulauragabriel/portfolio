@@ -17,7 +17,7 @@ p {
     display: flex;
     align-items: center;
     gap: 40px;
-    margin: 0px 30px;
+    margin: 0px 0px 0px 60px;
     min-height: calc(100vh - 220px); /* Ajusta para descontar header e footer */
     animation: fadeIn 1s ease-out;
 }
@@ -62,7 +62,7 @@ p {
 }
 
 .container-image img {
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
     border-radius: 15px;
 }
