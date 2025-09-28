@@ -195,11 +195,7 @@ footer {
 }
 
 .contatos .icon {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-    filter: brightness(0) saturate(100%);
-    transition: all 0.3s ease;
+    display: none;
 }
 
 .contatos .text {
@@ -207,7 +203,20 @@ footer {
 }
 
 .contatos a:hover .icon {
-    filter: brightness(0) saturate(100%) invert(25%) sepia(63%) saturate(4685%) hue-rotate(260deg) brightness(95%) contrast(87%);
+    filter: brightness(0) saturate(100%);
+    transform: scale(1.1);
+}
+
+.contatos a:visited .icon,
+.contatos a:active .icon,
+.contatos a:focus .icon {
+    filter: brightness(0) saturate(100%);
+}
+
+.contatos a:visited:hover .icon,
+.contatos a:active:hover .icon,
+.contatos a:focus:hover .icon {
+    filter: brightness(0) saturate(100%);
     transform: scale(1.1);
 }
 
@@ -299,8 +308,17 @@ footer {
     }
     
     .contatos .icon {
+        display: inline-block;
         width: 18px;
         height: 18px;
+        object-fit: contain;
+        filter: brightness(0) saturate(100%);
+        transition: all 0.3s ease;
+    }
+    
+    .contatos a:hover .icon {
+        filter: brightness(0) saturate(100%);
+        transform: scale(1.1);
     }
 }
 
@@ -332,7 +350,16 @@ footer {
     }
     
     .contatos .icon {
+        display: inline-block;
         width: 24px;
         height: 24px;
+        object-fit: contain;
+        filter: brightness(0) saturate(100%);
+        transition: all 0.3s ease;
+    }
+    
+    .contatos a:hover .icon {
+        filter: brightness(0) saturate(100%);
+        transform: scale(1.1);
     }
 }
