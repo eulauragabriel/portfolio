@@ -1,0 +1,384 @@
+{% extends "base.html" %}
+
+{% block title %}Sobre Mim{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/sobre.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="sobre-container">
+    <h1>Sobre Mim</h1>
+    
+    <!-- <div class="sobre-foto">
+        <img src="{{ url_for('static', filename='laura.png') }}" alt="Laura Gabriel">
+    </div> -->
+    
+    <p>Sou bastante extrovertida e aprecio poder conversar, trocar experiências e aprender com as pessoas ao meu redor. Sou apaixonada por história e motivada pela vontade de desenvolver projetos que auxiliem a sociedade.</p>
+    
+    <p>Divido meu tempo em desenvolver projetos para a faculdade, praticar meus hobbies e estar com as pessoas importantes para mim. Adoro explorar lugares novos e viver experiências diferentes.</p>
+</div>
+
+<!-- Seção de Hobbies -->
+<div class="hobbies-section">
+    <h2>Meus Hobbies</h2>
+    <div class="hobbies-carousel">
+        <div class="hobbies-carousel-inner">
+            <div class="hobbies-container" id="hobbiesContainer">
+                <div class="hobby-card">
+                    <div class="hobby-image">
+                        <img src="{{ url_for('static', filename='images/hobbies/illustration.png') }}" alt="Ilustração">
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Ilustração</h3>
+                        <p>Desde criança sempre amei desenhar e essa paixão por arte vai aumentando com o passar dos anos.</p>
+                    </div>
+                </div>
+                
+                <div class="hobby-card">
+                    <div class="hobby-image">
+                        <img src="{{ url_for('static', filename='images/hobbies/literature.png') }}" alt="Literatura">
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Literatura</h3>
+                        <p>Outro passatempo que tenho desde a infância é o da leitura. Amo me colocar nos mais diversos mundos, situações e histórias através dos livros.</p>
+                    </div>
+                </div>
+                
+                <div class="hobby-card">
+                    <div class="hobby-image">
+                        <img src="{{ url_for('static', filename='images/hobbies/anime_manga.png') }}" alt="Anime & Mangá">
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Anime & Mangá</h3>
+                        <p>Unindo a paixão por arte e por histórias, nos últimos anos essa parte da cultura asiática tem ocupado boa parte do meu tempo livre.</p>
+                    </div>
+                </div>
+                
+                <div class="hobby-card">
+                    <div class="hobby-image">
+                        <img src="{{ url_for('static', filename='images/hobbies/documentaries.png') }}" alt="Documentários">
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Documentários</h3>
+                        <p>Fora da fantasia, histórias sobre o mundo e pessoas reais também têm minha atenção.</p>
+                    </div>
+                </div>
+                
+                <div class="hobby-card">
+                    <div class="hobby-image">
+                        <img src="{{ url_for('static', filename='images/hobbies/crochet.png') }}" alt="Crochê">
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Crochê</h3>
+                        <p>Minha mais nova descoberta foi o crochê. Comecei por acaso e me encantei.</p>
+                    </div>
+                </div>
+                
+                <div class="hobby-card">
+                    <div class="hobby-image">
+                        <img src="{{ url_for('static', filename='images/hobbies/travel.png') }}" alt="Viagens">
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Viagens</h3>
+                        <p>Acho que o meu preferido dentre esses definitivamente é viajar e poder conhecer lugares, pessoas e culturas novas.</p>
+                    </div>
+                </div>
+                
+                <div class="hobby-card">
+                    <div class="hobby-image">
+                        <img src="{{ url_for('static', filename='images/hobbies/etc.png') }}" alt="Etc">
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Etc</h3>
+                        <p>Além disso, gosto muito de vôlei, música, filmes, séries, fotografia, estar com amigos e família, e obviamente, desenvolver.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botões de navegação -->
+        <button class="carousel-btn prev-btn" onclick="scrollHobbies(-1)">&#8249;</button>
+        <button class="carousel-btn next-btn" onclick="scrollHobbies(1)">&#8250;</button>
+    </div>
+        
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <span class="indicator active" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+</div>
+
+<!-- Seção de Certificações -->
+<div class="certificates-section">
+    <h2>Certificações</h2>
+    <div class="certificates-carousel">
+        <div class="certificates-carousel-inner">
+            <div class="certificates-container" id="certificatesContainer">
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="{{ url_for('static', filename='images/certificates/toeic.png') }}" alt="TOEIC">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>TOEIC</h3>
+                        <p>Certificado de proficiência em inglês (B2).</p>
+                        <a href="{{ url_for('static', filename='images/certificates/toeic.pdf') }}" target="_blank" class="certificate-link">Ver certificado</a>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="{{ url_for('static', filename='images/certificates/comprovante-de-pesquisa.png') }}" alt="PIBITI">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>PIBITI</h3>
+                        <p>Participação no Programa Institucional de Bolsas de Iniciação em Desenvolvimento Tecnológico e Inovação.</p>
+                        <a href="{{ url_for('static', filename='images/certificates/comprovante-de-pesquisa.pdf') }}" target="_blank" class="certificate-link">Ver certificado</a>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="{{ url_for('static', filename='images/certificates/certificado_sicinpe.png') }}" alt="SICINPE 2024">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>SICINPE 2024</h3>
+                        <p>Participação no SICINPE 2024 apresentando projeto de IA em sensoriamento remoto.</p>
+                        <a href="{{ url_for('static', filename='images/certificates/certificado_sicinpe.pdf') }}" target="_blank" class="certificate-link">Ver certificado</a>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="{{ url_for('static', filename='images/certificates/fatec-front-end-basico.png') }}" alt="Front-end Básico">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Front-end Básico</h3>
+                        <p>Micro-certificação de Front-end Básico da FATEC.</p>
+                        <a href="{{ url_for('static', filename='images/certificates/fatec-front-end-basico.pdf') }}" target="_blank" class="certificate-link">Ver certificado</a>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="{{ url_for('static', filename='images/certificates/getting-started-with-python.png') }}" alt="Getting Started with Python">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Python - University of Michigan</h3>
+                        <p>Programming for Everybody (Getting Started with Python) - Coursera.</p>
+                        <a href="{{ url_for('static', filename='images/certificates/getting-started-with-python.pdf') }}" target="_blank" class="certificate-link">Ver certificado</a>
+                    </div>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="{{ url_for('static', filename='images/certificates/certificado-onhb.png') }}" alt="Olimpíada ONHB">
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Olimpíada ONHB</h3>
+                        <p>Participação na 13° Olimpíada Nacional de História do Brasil.</p>
+                        <a href="{{ url_for('static', filename='images/certificates/certificado-onhb.pdf') }}" target="_blank" class="certificate-link">Ver certificado</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botões de navegação -->
+        <button class="carousel-btn cert-prev-btn" onclick="scrollCertificates(-1)">&#8249;</button>
+        <button class="carousel-btn cert-next-btn" onclick="scrollCertificates(1)">&#8250;</button>
+    </div>
+        
+        <!-- Indicadores -->
+        <div class="carousel-indicators cert-indicators">
+            <span class="indicator active" onclick="currentCertSlide(1)"></span>
+            <span class="indicator" onclick="currentCertSlide(2)"></span>
+            <span class="indicator" onclick="currentCertSlide(3)"></span>
+        </div>
+    </div>
+</div>
+
+<script>
+let currentSlideIndex = 0;
+const totalSlides = 7;
+let cardsPerView = 3;
+let maxSlideIndex = Math.ceil(totalSlides / cardsPerView) - 1;
+
+function scrollHobbies(direction) {
+    const container = document.getElementById('hobbiesContainer');
+    const cardWidth = container.querySelector('.hobby-card').offsetWidth;
+    const gap = window.innerWidth <= 768 ? 10 : 20; // gap responsivo
+    const moveDistance = (cardWidth + gap) * (window.cardsPerView || cardsPerView);
+    
+    currentSlideIndex += direction;
+    
+    if (currentSlideIndex < 0) {
+        currentSlideIndex = window.maxSlideIndex || maxSlideIndex;
+    } else if (currentSlideIndex > (window.maxSlideIndex || maxSlideIndex)) {
+        currentSlideIndex = 0;
+    }
+    
+    container.style.transform = `translateX(-${currentSlideIndex * moveDistance}px)`;
+    updateIndicators();
+}
+
+function currentSlide(n) {
+    currentSlideIndex = n - 1;
+    const container = document.getElementById('hobbiesContainer');
+    const cardWidth = container.querySelector('.hobby-card').offsetWidth;
+    const gap = window.innerWidth <= 768 ? 10 : 20;
+    const moveDistance = (cardWidth + gap) * (window.cardsPerView || cardsPerView);
+    
+    const currentMaxSlide = window.maxSlideIndex || maxSlideIndex;
+    if (currentSlideIndex > currentMaxSlide) {
+        currentSlideIndex = currentMaxSlide;
+    }
+    
+    container.style.transform = `translateX(-${currentSlideIndex * moveDistance}px)`;
+    updateIndicators();
+}
+
+function updateIndicators() {
+    const indicators = document.querySelectorAll('.indicator');
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentSlideIndex);
+    });
+}
+
+// Auto-scroll (opcional) - pausado ao passar o mouse
+let autoScrollInterval;
+
+function startAutoScroll() {
+    autoScrollInterval = setInterval(() => {
+        scrollHobbies(1);
+    }, 4000);
+}
+
+function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
+}
+
+// Iniciar auto-scroll
+startAutoScroll();
+
+// Pausar auto-scroll ao passar o mouse sobre o carrossel
+document.querySelector('.hobbies-carousel').addEventListener('mouseenter', stopAutoScroll);
+document.querySelector('.hobbies-carousel').addEventListener('mouseleave', startAutoScroll);
+
+// Ajustar comportamento responsivo
+function updateCarouselForScreenSize() {
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+        // No mobile: 1 card por vez, 7 slides
+        window.cardsPerView = 1;
+        window.maxSlideIndex = totalSlides - 1;
+    } else {
+        // No desktop: 3 cards por vez, 3 slides
+        window.cardsPerView = 3;
+        window.maxSlideIndex = Math.ceil(totalSlides / 3) - 1;
+    }
+    
+    // Resetar para o primeiro slide
+    currentSlideIndex = 0;
+    const container = document.getElementById('hobbiesContainer');
+    container.style.transform = 'translateX(0)';
+    updateIndicators();
+}
+
+// Chamar na inicialização e no redimensionamento
+window.addEventListener('load', updateCarouselForScreenSize);
+window.addEventListener('resize', updateCarouselForScreenSize);
+
+// ===== CARROSSEL DE CERTIFICAÇÕES =====
+let currentCertSlideIndex = 0;
+const totalCertificates = 6;
+let certCardsPerView = 3;
+let maxCertSlideIndex = Math.ceil(totalCertificates / certCardsPerView) - 1;
+
+function scrollCertificates(direction) {
+    const container = document.getElementById('certificatesContainer');
+    const cardWidth = container.querySelector('.certificate-card').offsetWidth;
+    const gap = window.innerWidth <= 768 ? 10 : 20;
+    const moveDistance = (cardWidth + gap) * (window.certCardsPerView || certCardsPerView);
+    
+    currentCertSlideIndex += direction;
+    
+    if (currentCertSlideIndex < 0) {
+        currentCertSlideIndex = window.maxCertSlideIndex || maxCertSlideIndex;
+    } else if (currentCertSlideIndex > (window.maxCertSlideIndex || maxCertSlideIndex)) {
+        currentCertSlideIndex = 0;
+    }
+    
+    container.style.transform = `translateX(-${currentCertSlideIndex * moveDistance}px)`;
+    updateCertIndicators();
+}
+
+function currentCertSlide(n) {
+    currentCertSlideIndex = n - 1;
+    const container = document.getElementById('certificatesContainer');
+    const cardWidth = container.querySelector('.certificate-card').offsetWidth;
+    const gap = window.innerWidth <= 768 ? 10 : 20;
+    const moveDistance = (cardWidth + gap) * (window.certCardsPerView || certCardsPerView);
+    
+    const currentMaxSlide = window.maxCertSlideIndex || maxCertSlideIndex;
+    if (currentCertSlideIndex > currentMaxSlide) {
+        currentCertSlideIndex = currentMaxSlide;
+    }
+    
+    container.style.transform = `translateX(-${currentCertSlideIndex * moveDistance}px)`;
+    updateCertIndicators();
+}
+
+function updateCertIndicators() {
+    const indicators = document.querySelectorAll('.cert-indicators .indicator');
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentCertSlideIndex);
+    });
+}
+
+// Auto-scroll para certificações
+let certAutoScrollInterval;
+
+function startCertAutoScroll() {
+    certAutoScrollInterval = setInterval(() => {
+        scrollCertificates(1);
+    }, 5000);
+}
+
+function stopCertAutoScroll() {
+    clearInterval(certAutoScrollInterval);
+}
+
+// Iniciar auto-scroll para certificações
+startCertAutoScroll();
+
+// Pausar auto-scroll ao passar o mouse sobre o carrossel de certificações
+document.querySelector('.certificates-carousel').addEventListener('mouseenter', stopCertAutoScroll);
+document.querySelector('.certificates-carousel').addEventListener('mouseleave', startCertAutoScroll);
+
+// Ajustar comportamento responsivo para certificações
+function updateCertCarouselForScreenSize() {
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+        window.certCardsPerView = 1;
+        window.maxCertSlideIndex = totalCertificates - 1;
+    } else {
+        window.certCardsPerView = 3;
+        window.maxCertSlideIndex = Math.ceil(totalCertificates / 3) - 1;
+    }
+    
+    currentCertSlideIndex = 0;
+    const container = document.getElementById('certificatesContainer');
+    container.style.transform = 'translateX(0)';
+    updateCertIndicators();
+}
+
+// Chamar na inicialização e no redimensionamento para certificações
+window.addEventListener('load', updateCertCarouselForScreenSize);
+window.addEventListener('resize', updateCertCarouselForScreenSize);
+</script>
+
+{% endblock %}

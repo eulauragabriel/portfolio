@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Laura Gabriel{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/star.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/base.css') }}">
+    {% block styles %}{% endblock %}
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('home') }}" class="logo">
+            <img src="{{ url_for('static', filename='images/star.png') }}" alt="Star">
+            <span>Laura Gabriel</span>
+        </a>
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="{{ url_for('home') }}" onclick="closeMenu()">home</a></li>
+                    <li><a href="{{ url_for('sobre_mim') }}" onclick="closeMenu()">sobre mim</a></li>
+                    <li><a href="{{ url_for('projetos') }}" onclick="closeMenu()">projetos</a></li>
+                    <li><a href="{{ url_for('tecnologias') }}" onclick="closeMenu()">tecnologias</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="contatos">
+            <ul>
+                <li><a href="mailto:eulauragabriel@gmail.com">e-mail</a></li>
+                <li><a href="https://www.linkedin.com/in/eulauragabriel" target="_blank" rel="noopener">linkedin</a></li>
+                <li><a href="https://github.com/eulauragabriel" target="_blank" rel="noopener">github</a></li>
+                <li><a href="https://www.instagram.com/eulauragabriel" target="_blank" rel="noopener">instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.remove('active');
+        }
+
+        // Fechar menu ao clicar fora dele
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.getElementById('navMenu');
+            
+            if (!nav.contains(event.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Fechar menu ao redimensionar a tela
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                const navMenu = document.getElementById('navMenu');
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

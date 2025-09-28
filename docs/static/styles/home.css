@@ -1,0 +1,152 @@
+@import 'base.css';
+
+/* Estilos específicos da página Home */
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3.5em;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+p {
+    font-size: 1.15em;
+    line-height: 1.5;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 0px 30px;
+    min-height: calc(100vh - 220px); /* Ajusta para descontar header e footer */
+    animation: fadeIn 1s ease-out;
+}
+
+.container-text {
+    flex: 1;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+/* Estilos para o link do currículo */
+.curriculo-link {
+    margin-top: 30px;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.curriculo-link a {
+    display: inline-block;
+    padding: 12px 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #333;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.curriculo-link a:hover {
+    background: #333;
+    color: #cea8f0;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container-image {
+    flex: 1;
+    text-align: center;
+    animation: slideInRight 0.8s ease-out;
+}
+
+.container-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Responsividade para Home */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px; /* Menos espaço no mobile com menu compacto */
+        padding-bottom: 140px; /* Mais espaço no mobile para footer */
+    }
+    
+    header {
+        padding: 15px 0;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #cea8f0;
+        padding: 20px 0;
+    }
+    
+    .nav-menu.active {
+        display: block !important;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    nav li {
+        width: 100%;
+    }
+    
+    nav a {
+        display: block;
+        padding: 15px 20px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        margin-bottom: 5px;
+    }
+    
+    nav a:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .main-container {
+        flex-direction: column;
+        padding: 20px;
+        margin: 20px;
+        min-height: calc(100vh - 210px);
+    }
+    
+    .contatos ul {
+        gap: 20px;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    .container-image img {
+        max-width: 100%;
+    }
+    
+    /* Responsividade do link do currículo */
+    .curriculo-link {
+        text-align: center;
+        margin-top: 25px;
+    }
+    
+    .curriculo-link a {
+        font-size: 1em;
+        padding: 10px 25px;
+    }
+}

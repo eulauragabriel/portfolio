@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="main-container">
+    <div class="container-text">
+        <p class="text">Oi, eu sou a</p>
+        <h1 class="name">Laura Gabriel</h1>
+        <p class="text">Sou estudante de Desenvolvimento de Software Multiplataforma na FATEC e estagiária de Desenvolvimento de Sistemas na Embraer.
+        Sou curiosa, gosto de me desafiar, aprender coisas novas e sou apaixonada por transformar ideias em projetos reais.
+        Aqui no meu portfólio você encontra um pouquinho sobre mim, meus projetos e minha trajetória com tecnologia.</p>        
+        <div class="curriculo-link">
+            <a class="text" href="https://drive.google.com/file/d/1hjN9xSd5WdSIknSAmcHd2f95MtV_dOv_/view?usp=drive_link" target='_blank' rel="noopener noreferrer">Currículo</a>
+        </div>
+    </div>
+    <div class="container-image">
+        <img src="{{ url_for('static', filename='images/profile/laura.png') }}" alt="Laura Gabriel" class="profile">
+    </div>
+</div>
+{% endblock %}

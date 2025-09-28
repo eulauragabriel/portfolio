@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+
+{% block title %}Tecnologias{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/tecnologias.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="tecnologias-container">
+    <h1>Tecnologias</h1>
+    
+    <div class="tech-description">
+        <p>Aqui estão as principais tecnologias que já utilizei em projetos acadêmicos, pessoais e profissionais.</p>
+    </div>
+    
+    <div class="tech-categories">
+        <!-- Frontend -->
+        <div class="tech-category">
+            <h2>Frontend</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/js.png') }}" alt="JavaScript" class="tech-logo">
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/html.png') }}" alt="HTML" class="tech-logo">
+                    <span>HTML</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/css.png') }}" alt="CSS" class="tech-logo">
+                    <span>CSS</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/react.png') }}" alt="React" class="tech-logo">
+                    <span>React</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/react.png') }}" alt="React" class="tech-logo">
+                    <span>React Native</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/angular.png') }}" alt="Angular" class="tech-logo">
+                    <span>Angular</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Backend -->
+        <div class="tech-category">
+            <h2>Backend</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/java.png') }}" alt="Java" class="tech-logo">
+                    <span>Java</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/springboot.png') }}" alt="Spring Boot" class="tech-logo">
+                    <span>Spring Boot</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/typescript.png') }}" alt="TypeScript" class="tech-logo">
+                    <span>TypeScript</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/nodejs.png') }}" alt="NodeJS" class="tech-logo">
+                    <span>NodeJS</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/python.png') }}" alt="Python" class="tech-logo">
+                    <span>Python</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/flask.png') }}" alt="Flask" class="tech-logo">
+                    <span>Flask</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/websocket.svg') }}" alt="WebSocket" class="tech-logo">
+                    <span>WebSocket</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Database -->
+        <div class="tech-category">
+            <h2>Database</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/postgresql.png') }}" alt="PostgreSQL" class="tech-logo">
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/mysql.png') }}" alt="MySQL" class="tech-logo">
+                    <span>MySQL</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/mongodb.svg') }}" alt="MongoDB" class="tech-logo">
+                    <span>MongoDB</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/redis.svg') }}" alt="Redis" class="tech-logo">
+                    <span>Redis</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/apachecassandra.svg') }}" alt="Cassandra" class="tech-logo">
+                    <span>Cassandra</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/neo4j.png') }}" alt="Neo4j" class="tech-logo">
+                    <span>Neo4j</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/firebase.svg') }}" alt="Firebase" class="tech-logo">
+                    <span>Firebase</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- DevOps -->
+        <div class="tech-category">
+            <h2>DevOps</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/aws.svg') }}" alt="AWS" class="tech-logo">
+                    <span>AWS</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/google-cloud.svg') }}" alt="Google Cloud" class="tech-logo">
+                    <span>Google Cloud</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/azure.svg') }}" alt="Azure" class="tech-logo">
+                    <span>Azure</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">▲</div>
+                    <span>Vercel</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/heroku.svg') }}" alt="Heroku" class="tech-logo">
+                    <span>Heroku</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/git.svg') }}" alt="Git" class="tech-logo">
+                    <span>Git</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ferramentas -->
+        <div class="tech-category">
+            <h2>Ferramentas</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/expo.svg') }}" alt="Expo" class="tech-logo">
+                    <span>Expo</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/figma.svg') }}" alt="Figma" class="tech-logo">
+                    <span>Figma</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/swagger.svg') }}" alt="Swagger" class="tech-logo">
+                    <span>Swagger</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/jupyter.svg') }}" alt="Jupyter" class="tech-logo">
+                    <span>Jupyter</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/colab.png') }}" alt="Colab" class="tech-logo">
+                    <span>Colab</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/jira.png') }}" alt="Jira" class="tech-logo">
+                    <span>Jira</span>
+                </div>
+                <div class="tech-item">
+                    <img src="{{ url_for('static', filename='images/technologies/confluence.png') }}" alt="Confluence" class="tech-logo">
+                    <span>Confluence</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

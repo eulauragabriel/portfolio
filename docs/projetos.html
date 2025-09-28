@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Laura Gabriel</title>
+    <link rel="icon" type="image/png" href="./static/images/star.png">
+    <link rel="stylesheet" href="./static/styles/base.css">
+    <link rel="stylesheet" href="./static/styles/projetos.css">
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo">
+            <img src="./static/images/star.png" alt="Star">
+            <span>Laura Gabriel</span>
+        </a>
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="./index.html" onclick="closeMenu()">home</a></li>
+                    <li><a href="./sobre.html" onclick="closeMenu()">sobre mim</a></li>
+                    <li><a href="./projetos.html" onclick="closeMenu()">projetos</a></li>
+                    <li><a href="./tecnologias.html" onclick="closeMenu()">tecnologias</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="projetos-container">
+            <h1>Meus Projetos</h1>
+            
+            <div class="projetos-grid">
+                <!-- Projeto 1: Iniciação Tecnológica (INPE) -->
+                <div class="projeto-card">
+                    <img src="./static/images/projects/projetoX.png" alt="Iniciação Tecnológica (INPE)" class="projeto-img">
+                    <h3>Iniciação Tecnológica (INPE)</h3>
+                    <p>Pesquisa aplicada ao uso de técnicas de IA no processamento de imagens de satélite para detecção de incêndios florestais.</p>
+                    <div class="projeto-tags">
+                        <span class="tag">Pesquisa</span>
+                        <span class="tag">IA</span>
+                    </div>
+                    <div class="projeto-links">
+                        <a href="http://mtc-m21d.sid.inpe.br/col/sid.inpe.br/mtc-m21d/2024/08.13.14.55/doc/thisInformationItemHomePage.html" target="_blank">Repositório</a>
+                        <button class="saiba-mais-btn" onclick="openModal('modal-1')">Saiba Mais</button>
+                    </div>
+                </div>
+
+                <!-- Projeto 2: UNES -->
+                <div class="projeto-card">
+                    <img src="./static/images/projects/projetoI.png" alt="UNES" class="projeto-img">
+                    <h3>UNES</h3>
+                    <p>Site educacional com recursos interativos desenvolvido para a aula de Desenvolvimento Web I.</p>
+                    <div class="projeto-tags">
+                        <span class="tag">Faculdade</span>
+                        <span class="tag">Website</span>
+                    </div>
+                    <div class="projeto-links">
+                        <a href="https://github.com/eulauragabriel/site-unes" target="_blank">GitHub</a>
+                        <button class="saiba-mais-btn" onclick="openModal('modal-2')">Saiba Mais</button>
+                    </div>
+                </div>
+
+                <!-- Projeto 3: Portfólio Design Digital -->
+                <div class="projeto-card">
+                    <img src="./static/images/projects/projetoII.png" alt="Portfólio Design Digital" class="projeto-img">
+                    <h3>Portfólio Design Digital</h3>
+                    <p>Coleção pessoal de trabalhos desenvolvida para a aula de Design Digital.</p>
+                    <div class="projeto-tags">
+                        <span class="tag">Faculdade</span>
+                        <span class="tag">Design</span>
+                    </div>
+                    <div class="projeto-links">
+                        <a href="https://github.com/eulauragabriel/design-digital-portfolio" target="_blank">GitHub</a>
+                        <button class="saiba-mais-btn" onclick="openModal('modal-3')">Saiba Mais</button>
+                    </div>
+                </div>
+
+                <!-- Projeto 4: Projeto Integrador -->
+                <div class="projeto-card">
+                    <img src="./static/images/projects/projetoIII.png" alt="Projeto Integrador" class="projeto-img">
+                    <h3>Projeto Integrador 1° Semestre</h3>
+                    <p>Site desenvolvido em equipe sobre Covid Longa para um cliente da Rede Vanguarda.</p>
+                    <div class="projeto-tags">
+                        <span class="tag">Faculdade</span>
+                        <span class="tag">Website</span>
+                    </div>
+                    <div class="projeto-links">
+                        <a href="https://github.com/Equipe-CodeLand/API-2023.1" target="_blank">GitHub</a>
+                        <button class="saiba-mais-btn" onclick="openModal('modal-4')">Saiba Mais</button>
+                    </div>
+                </div>
+
+                <!-- Projeto 5: Gerenciador de Músicas -->
+                <div class="projeto-card">
+                    <img src="./static/images/projects/projetoVI.png" alt="Gerenciador de Músicas" class="projeto-img">
+                    <h3>Gerenciador de Músicas</h3>
+                    <p>CRUD desenvolvido para aula de Desenvolvimento Web II com funcionalidades completas.</p>
+                    <div class="projeto-tags">
+                        <span class="tag">Faculdade</span>
+                        <span class="tag">Banco de Dados</span>
+                    </div>
+                    <div class="projeto-links">
+                        <a href="https://github.com/eulauragabriel/desenvolvimento-web-II/tree/main/lista_03" target="_blank">GitHub</a>
+                        <button class="saiba-mais-btn" onclick="openModal('modal-5')">Saiba Mais</button>
+                    </div>
+                </div>
+
+                <!-- Projeto 6: World Beauty -->
+                <div class="projeto-card">
+                    <img src="./static/images/projects/projetoV.png" alt="World Beauty" class="projeto-img">
+                    <h3>World Beauty</h3>
+                    <p>Site para empresa fictícia desenvolvido em dupla para Técnicas de Programação I.</p>
+                    <div class="projeto-tags">
+                        <span class="tag">Faculdade</span>
+                        <span class="tag">Website</span>
+                    </div>
+                    <div class="projeto-links">
+                        <a href="https://github.com/leticiacarvalho04/WB/tree/atvi5-wb" target="_blank">GitHub</a>
+                        <button class="saiba-mais-btn" onclick="openModal('modal-6')">Saiba Mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modais -->
+        <div id="modal-1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-1')">&times;</span>
+                <h2>Iniciação Tecnológica (INPE)</h2>
+                <p><strong>Descrição:</strong> Participação no Programa Institucional de Bolsas de Iniciação em Desenvolvimento Tecnológico e Inovação desenvolvendo pesquisa sobre aplicação de técnicas de inteligência artificial à resolução de problemas de processamento de imagens utilizadas em sensoriamento remoto.</p>
+                <p><strong>Tecnologias:</strong> Python, Machine Learning, Processamento de Imagens, Sensoriamento Remoto</p>
+                <p><strong>Período:</strong> 2024</p>
+                <p><strong>Instituição:</strong> Instituto Nacional de Pesquisas Espaciais (INPE)</p>
+            </div>
+        </div>
+
+        <div id="modal-2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-2')">&times;</span>
+                <h2>UNES - Universidade</h2>
+                <p><strong>Descrição:</strong> Site educacional desenvolvido para a disciplina de Desenvolvimento Web I, simulando o portal de uma universidade fictícia com páginas informativas sobre cursos, campus e informações institucionais.</p>
+                <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
+                <p><strong>Funcionalidades:</strong> Design responsivo, navegação intuitiva, páginas informativas</p>
+                <p><strong>Período:</strong> 2023</p>
+            </div>
+        </div>
+
+        <div id="modal-3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-3')">&times;</span>
+                <h2>Portfólio Design Digital</h2>
+                <p><strong>Descrição:</strong> Coleção digital de trabalhos desenvolvidos durante a disciplina de Design Digital, showcase de projetos gráficos e interfaces.</p>
+                <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript, Design Gráfico</p>
+                <p><strong>Conteúdo:</strong> Projetos de UI/UX, identidade visual, design gráfico</p>
+                <p><strong>Período:</strong> 2023</p>
+            </div>
+        </div>
+
+        <div id="modal-4" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-4')">&times;</span>
+                <h2>Projeto Integrador - Covid Longa</h2>
+                <p><strong>Descrição:</strong> Desenvolvimento de site informativo sobre Covid Longa em parceria com a Rede Vanguarda, trabalhando em equipe multidisciplinar para criar conteúdo educativo sobre o tema.</p>
+                <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript, Bootstrap</p>
+                <p><strong>Equipe:</strong> Projeto em equipe com metodologia ágil</p>
+                <p><strong>Cliente:</strong> Rede Vanguarda</p>
+                <p><strong>Período:</strong> 2023</p>
+            </div>
+        </div>
+
+        <div id="modal-5" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-5')">&times;</span>
+                <h2>Gerenciador de Músicas</h2>
+                <p><strong>Descrição:</strong> Sistema CRUD completo para gerenciamento de biblioteca musical, desenvolvido para a disciplina de Desenvolvimento Web II.</p>
+                <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+                <p><strong>Funcionalidades:</strong> Cadastro, edição, exclusão e listagem de músicas</p>
+                <p><strong>Período:</strong> 2023</p>
+            </div>
+        </div>
+
+        <div id="modal-6" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-6')">&times;</span>
+                <h2>World Beauty</h2>
+                <p><strong>Descrição:</strong> Site institucional para empresa fictícia do setor de beleza, desenvolvido em dupla para a disciplina de Técnicas de Programação I.</p>
+                <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript, TypeScript</p>
+                <p><strong>Funcionalidades:</strong> Sistema de cadastro, design responsivo</p>
+                <p><strong>Período:</strong> 2023</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.remove('active');
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Fechar modal ao clicar fora dele
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
